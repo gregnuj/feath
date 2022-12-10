@@ -1,0 +1,14 @@
+syntax = "proto3";
+package feath.feath;
+
+import "gogoproto/gogo.proto";
+import "feath/feath/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "feath/x/feath/types";
+
+// GenesisState defines the feath module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
